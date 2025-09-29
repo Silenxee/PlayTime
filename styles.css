@@ -113,6 +113,7 @@ body{
 
 .button_One:hover{
     background-color: #00AA40;
+    color: #eee;
 }
 
 .button_Two{
@@ -121,5 +122,6 @@ body{
 
 .button_Two:hover{
     background-color: #F8AA1F;
+    color: #eee;
 }
 
