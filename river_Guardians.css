@@ -5,6 +5,7 @@ body {
     height: 100vh;
 }
 
+
 .bar_Logo {
     background: linear-gradient(to right, #00F0FF, #7B2FF7);
     width: 100%;
@@ -28,21 +29,51 @@ body {
     color: #eee;
 }
 
+
+/* ---------------------------------------------------------- */
+/* Juego SCRATCH */
+
 .container_Game {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: calc(100vh - 120px);
     padding: 40px;
     box-sizing: border-box;
 }
 
+iframe{
+    background-color: #111;
+    border-radius: 15px;
+    width: 80%;
+    height: 80%;
+}
+
+.game{
+    display: none;
+}
+
+.button_Game {
+    background-color: #00FF40;
+}
+
+.buttons_game{
+    margin: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* ----------------------------------------------------------- */
+/* BOX de Instrucciones y Video */
+
 .game_Box {
     background: #00F0FF;
     width: 95%;
-    max-width: 1200px;
+    max-width: 1350px;
     height: 85vh;
-    max-height: 650px;
+    max-height: 750px;
     border: 15px solid #00F0FF;
     border-radius: 15px;
     box-shadow: 0 0 8px 2px #00F0FF;
@@ -51,6 +82,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
 }
 
 .game_Title {
@@ -62,37 +94,21 @@ body {
     margin: -30px 0 20px 0;
 }
 
-.game_Content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex: 1;
-    gap: 0px;
-}
-
-.side_Panel {
+.box_gvideo{
     background-color: #111;
-    width: 230px;
-    height: 100%;
-    border-radius: 10px;
+    max-width: 1100px;
+    max-height: 500px;
+    position: relative;
 }
 
-.center_Image {
-    flex: 1;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border-radius: 10px;
-}
-
-.center_Image img {
+.video_game{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+}
+
+.hidden{
+    display: none;
 }
 
 .button_Container {
@@ -106,22 +122,19 @@ body {
     height: 75px;
     border-radius: 20px;
     font-family: "Jersey";
-    font-size: 50px;
+    font-size: 45px;
     color: #111;
     border: none;
     cursor: pointer;
 }
 
-.button_Inicio {
+.button_Video {
     background-color: #00FF40;
 }
 
-.button_Jugar {
-    background-color: #00FF40;
-}
 
-.button_Inicio:hover,
-.button_Jugar:hover {
+.button_Video:hover,
+.button_Game:hover {
     background-color: #00AA40;
     color: #eee;
 }

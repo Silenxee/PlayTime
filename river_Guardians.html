@@ -12,32 +12,59 @@
     <title>River Guardians - Playtime</title>
 </head>
 <body>
+
     <div class="bar_Logo">
+
         <img src="img/android-chrome-192x192.png" alt="Logo Playtime" type="image/png" class="main_Logo">
         <h1 class="main_Tittle">Playtime</h1>
+
     </div>
-    
+
     <div class="container_Game">
-        <div class="game_Box">
-            <h1 class="game_Title">Intrucciones</h1>
-            
-            <div class="game_Content">
-                <div class="side_Panel"></div>
-                
-                <div class="center_Image">
-                    <img src="img/videoGameOne.jpeg" alt="Imagen del juego River Guardians">
-                </div>
-                
-                <div class="side_Panel"></div>
-            </div>
-            
-            <div class="button_Container">
-                <a href="index.html"> 
-                <button class="game_Button button_Inicio">Inicio</button>
+
+        <iframe id="game" class="game" src="https://scratch.mit.edu/projects/1242842553/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+
+        <div class="buttons_game">
+
+            <a href="index.html"> 
+                <button class="game_Button button_Game">Inicio</button>
             </a>
-                <button class="game_Button button_Jugar">Jugar</button>
-            </div>
+            <button onclick="verInstrucciones()" class="game_Button button_Game">Instrucciones</button>
+
         </div>
+
+        <div class="game_Box" id="windowInstructions">
+
+            <h1 class="game_Title">Intrucciones</h1>
+
+            <div class="box_gvideo">
+                <video class="video_game" src="video/TutorialRiver.mp4" controls muted></video>
+            </div>
+
+            <div class="button_Container">
+
+                <a href="index.html"> 
+                    <button class="game_Button button_Video">Inicio</button>
+                </a>
+
+                <button onclick="cerrarVentana()" class="game_Button button_Video">Jugar</button>
+
+            </div>
+
+        </div>
+
     </div>
+
+    <script>
+        function cerrarVentana(){
+            document.getElementById("windowInstructions").classList.add("hidden")
+            document.getElementById("game").removeAttribute("class")
+        }
+        
+        function verInstrucciones(){
+            document.getElementById("windowInstructions").classList.remove("hidden");
+            document.getElementById("game").setAttribute("class","game")
+        }
+    </script>
 </body>
 </html>
